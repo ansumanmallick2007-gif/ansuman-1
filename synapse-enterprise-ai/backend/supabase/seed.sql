@@ -18,7 +18,7 @@ ON CONFLICT (email) DO NOTHING;
 INSERT INTO public.documents (id, title, department, file_type, raw_content, ai_summary, extracted_entities, uploaded_by)
 VALUES
   (
-    'doc-001-uuid',
+    'a0a0a0a0-a0a0-4a0a-a0a0-a0a0a0a0a001',
     'Q3 Financial Health & EBITDA Reconciliation',
     'finance',
     'Financial Report',
@@ -28,7 +28,7 @@ VALUES
     '22222222-2222-4222-a222-222222222222'
   ),
   (
-    'doc-002-uuid',
+    'b0b0b0b0-b0b0-4b0b-b0b0-b0b0b0b0b002',
     'Global Remote Work & Compliance Framework 2026',
     'hr',
     'HR Policy',
@@ -38,7 +38,7 @@ VALUES
     '11111111-1111-4111-a111-111111111111'
   ),
   (
-    'doc-003-uuid',
+    'c0c0c0c0-c0c0-4c0c-c0c0-c0c0c0c0c003',
     'Microservices Mesh & Zero-Trust Architecture Spec',
     'engineering',
     'Technical Spec',
@@ -52,7 +52,7 @@ ON CONFLICT (id) DO NOTHING;
 INSERT INTO public.workflows (id, title, description, department, status, priority, assigned_to, ai_suggestions, due_date)
 VALUES
   (
-    'wf-001-uuid',
+    'd0d0d0d0-d0d0-4d0d-d0d0-d0d0d0d0d001',
     'Audit & Automate Cross-Border Tax Filings',
     'Reconcile multi-currency sales ledger across EMEA and APAC branches with automated Gemini discrepancy checks.',
     'finance',
@@ -63,7 +63,7 @@ VALUES
     NOW() + INTERVAL '5 days'
   ),
   (
-    'wf-002-uuid',
+    'e0e0e0e0-e0e0-4e0e-e0e0-e0e0e0e0e002',
     'Deploy Gemini Multimodal Extraction Service v2',
     'Upgrade document ingestion pipeline to support high-throughput financial statements and real-time structured telemetry parsing.',
     'engineering',
