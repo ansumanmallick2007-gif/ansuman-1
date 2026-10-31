@@ -1,0 +1,36 @@
+# ==============================================================================
+# SYNAPSE ENTERPRISE AI — SERVER RENDER DEPLOYMENT SPEC
+# ==============================================================================
+
+services:
+  - type: web
+    name: synapse-enterprise-server
+    env: node
+    plan: starter
+    region: oregon
+    buildCommand: npm install
+    startCommand: npm start
+    autoDeploy: true
+    healthCheckPath: /api/analytics/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: BACKEND_SERVICE_URL
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: CLIENT_URL
+        value: https://synapse-enterprise-ai.vercel.app
+
